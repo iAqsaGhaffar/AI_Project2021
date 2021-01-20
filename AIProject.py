@@ -50,3 +50,8 @@ def Mode():
         Result.set(Decode(private_key.get(), Text.get()))
     else:
         Result.set('Invalid Mode')
+
+
+###Function to exit window###    
+def Exit():
+    root.destroy()
