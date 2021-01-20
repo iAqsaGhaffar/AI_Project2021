@@ -1,19 +1,20 @@
-##importing modules
+####importing modules####
 
-from tkinter import *
+from tkinter import * #####  Libraries added  ######
 import base64
 
 #initialize window
-root = Tk()
-root.geometry('500x300')
+root = Tk()                
+root.geometry('600x400')     ### Scaling Window #####
 root.resizable(0,0)
+
 #title of the window
-root.title("DataFlair - Message Encode and Decode")
+root.title("AI_Python - Message Encode and Decode")
 
 #label
 
-Label(root, text ='ENCODE DECODE', font = 'arial 20 bold').pack()
-Label(root, text ='DataFlair', font = 'arial 20 bold').pack(side =BOTTOM)
+Label(root, text ='ENCODE DECODE', font = 'Verdana 20 bold').pack()
+Label(root, text ='AI-Python', font = 'Verdana 20 bold').pack(side =BOTTOM)
 
 #define variables
 
@@ -49,7 +50,7 @@ def Mode():
     elif(mode.get() == 'd'):
         Result.set(Decode(private_key.get(), Text.get()))
     else:
-        Result.set('Invalid Mode')
+        Result.set('Mode Invalid')
 
 
 ###Function to exit window###    
@@ -66,26 +67,26 @@ def Reset():
 
 ##Message##
 
-Label(root, font= 'arial 12 bold', text='MESSAGE').place(x= 60,y=60)
-Entry(root, font = 'arial 10', textvariable = Text, bg = 'ghost white').place(x=290, y = 60)
+Label(root, font= 'Verdana 12 bold', text='Message').place(x= 60,y=60)
+Entry(root, font = 'Verdana 10', textvariable = Text, bg = 'ghost white').place(x=350, y = 60)
 
 ###key###
-Label(root, font = 'arial 12 bold', text ='KEY').place(x=60, y = 90)
-Entry(root, font = 'arial 10', textvariable = private_key , bg ='ghost white').place(x=290, y = 90)
+Label(root, font = 'Verdana 12 bold', text ='Key').place(x=60, y = 90)
+Entry(root, font = 'Verdana 10', textvariable = private_key , bg ='ghost white').place(x=350, y = 90)
 
 ###mode##
-Label(root, font = 'arial 12 bold', text ='MODE(e-encode, d-decode)').place(x=60, y = 120)
-Entry(root, font = 'arial 10', textvariable = mode , bg= 'ghost white').place(x=290, y = 120)
+Label(root, font = 'Verdana 12 bold', text ='Mode((e)-encode, (d)-decode)').place(x=60, y = 120)
+Entry(root, font = 'Verdana 10', textvariable = mode , bg= 'ghost white').place(x=350, y = 120)
 
 ##result##
-Entry(root, font = 'arial 10 bold', textvariable = Result, bg ='ghost white').place(x=290, y = 150)
+Entry(root, font = 'Verdana 10 bold', textvariable = Result, bg ='ghost white').place(x=350, y = 150)
 
 ###result button###
-Button(root, font = 'arial 10 bold', text = 'RESULT'  ,padx =2,bg ='LightGray' ,command = Mode).place(x=60, y = 150)
+Button(root, font = 'Verdana 10 bold', text = 'Result'  ,padx =5 , pady = 5,bg ='LightGray' ,command = Mode).place(x=260, y = 150)
 
 ###reset button###
-Button(root, font = 'arial 10 bold' ,text ='RESET' ,width =6, command = Reset,bg = 'LimeGreen', padx=2).place(x=80, y = 190)
+Button(root, font = 'Verdana 10 bold' ,text ='Reset' ,width =10, command = Reset,bg = 'yellow', padx=8, pady=8).place(x=160, y = 190)
 
 ####exit button####
-Button(root, font = 'arial 10 bold',text= 'EXIT' , width = 6, command = Exit,bg = 'OrangeRed', padx=2, pady=2).place(x=180, y = 190)
+Button(root, font = 'Verdana 10 bold',text= 'Exit' , width = 10, command = Exit,bg = 'red', padx=8, pady=8).place(x=290, y = 190)
 root.mainloop()
