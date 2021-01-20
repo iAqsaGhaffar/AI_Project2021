@@ -82,3 +82,10 @@ Entry(root, font = 'arial 10 bold', textvariable = Result, bg ='ghost white').pl
 
 ###result button###
 Button(root, font = 'arial 10 bold', text = 'RESULT'  ,padx =2,bg ='LightGray' ,command = Mode).place(x=60, y = 150)
+
+###reset button###
+Button(root, font = 'arial 10 bold' ,text ='RESET' ,width =6, command = Reset,bg = 'LimeGreen', padx=2).place(x=80, y = 190)
+
+####exit button####
+Button(root, font = 'arial 10 bold',text= 'EXIT' , width = 6, command = Exit,bg = 'OrangeRed', padx=2, pady=2).place(x=180, y = 190)
+root.mainloop()
