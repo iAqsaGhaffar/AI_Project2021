@@ -62,3 +62,9 @@ def Reset():
     private_key.set("")
     mode.set("")
     Result.set("")
+######## Label and Button #######
+
+##Message##
+
+Label(root, font= 'arial 12 bold', text='MESSAGE').place(x= 60,y=60)
+Entry(root, font = 'arial 10', textvariable = Text, bg = 'ghost white').place(x=290, y = 60)
