@@ -55,3 +55,10 @@ def Mode():
 ###Function to exit window###    
 def Exit():
     root.destroy()
+
+####Reset Function####
+def Reset():
+    Text.set("")
+    private_key.set("")
+    mode.set("")
+    Result.set("")
