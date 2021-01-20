@@ -31,7 +31,7 @@ def Encode(key,message):
         key_c = key[i % len(key)]
         enc.append(chr((ord(message[i]) + ord(key_c)) % 256))
     return base64.urlsafe_b64encode("".join(enc).encode()).decode()
-    
+
 ######function to decode######
 
 def Decode(key,message):
@@ -41,3 +41,12 @@ def Decode(key,message):
         key_c = key[i % len(key)]
         dec.append(chr((256 + ord(message[i])- ord(key_c)) % 256))       
     return "".join(dec)
+
+###function to set mode###
+def Mode():
+    if(mode.get() == 'e'):
+        Result.set(Encode(private_key.get(), Text.get()))
+    elif(mode.get() == 'd'):
+        Result.set(Decode(private_key.get(), Text.get()))
+    else:
+        Result.set('Invalid Mode')
