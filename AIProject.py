@@ -72,3 +72,13 @@ Entry(root, font = 'arial 10', textvariable = Text, bg = 'ghost white').place(x=
 ###key###
 Label(root, font = 'arial 12 bold', text ='KEY').place(x=60, y = 90)
 Entry(root, font = 'arial 10', textvariable = private_key , bg ='ghost white').place(x=290, y = 90)
+
+###mode##
+Label(root, font = 'arial 12 bold', text ='MODE(e-encode, d-decode)').place(x=60, y = 120)
+Entry(root, font = 'arial 10', textvariable = mode , bg= 'ghost white').place(x=290, y = 120)
+
+##result##
+Entry(root, font = 'arial 10 bold', textvariable = Result, bg ='ghost white').place(x=290, y = 150)
+
+###result button###
+Button(root, font = 'arial 10 bold', text = 'RESULT'  ,padx =2,bg ='LightGray' ,command = Mode).place(x=60, y = 150)
